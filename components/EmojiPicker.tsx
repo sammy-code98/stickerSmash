@@ -3,13 +3,13 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { PropsWithChildren } from "react";
 
 type Props = PropsWithChildren<{
-  invisible: boolean;
+  isVisible: boolean;
   onClose: () => void;
 }>
 
-export default function EmojiPicker({ invisible, children, onClose }: Props) {
+export default function EmojiPicker({ isVisible, children, onClose }: Props) {
   return (
-    <Modal animationType="slide" transparent={true} visible={invisible}>
+    <Modal animationType="slide" transparent={true} visible={isVisible}>
       <View style={styles.modalContent}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Choose a sticker</Text>
